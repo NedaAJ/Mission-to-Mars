@@ -10,14 +10,16 @@ The goal of this project was to learn how to scrape data from the NASA Science M
 
 ## Results
 
+The end result was a completely functioning web application built using Flask that includes photos, a table comparing Mars to Earth, and the most recent article title and short description scraped from NASA's homepage. When we click the "Scrape Fresh Data" button, both the webpage and the MongoDB are updated with new information.
+
+***Image from the webpage using Chrome browser:***
 
 ![Mars_Hemispheres.PNG](Resources/Mars_Hemispheres.PNG)
 
+***Viewing it from phone:***
+
 ![Mobile-version.PNG](Resources/Mobile-version.PNG
 )
-
-## Summary of Analysis
-
 
 ## Contact:
 - Email : [neda.ahmadi.jesh@gmail.com](mailto:neda.ahmadi.jesh@gmail.com?subject=[GitHub]%20Source%20Han%20Sans)
