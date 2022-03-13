@@ -8,14 +8,18 @@
 from splinter import Browser
 from bs4 import BeautifulSoup as soup
 import pandas as pd
+
+from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+
+driver = webdriver.Chrome("C:/Users/N01405605/Webdrivers/chromedriver.exe")
 
 
 # In[2]:
 
 
 # Set the executable path and initialize Splinter
-executable_path = {'executable_path': 'chromedriver.exe'}
+executable_path = {'executable_path': ChromeDriverManager().install()}
 browser = Browser('chrome', **executable_path, headless=False)
 
 
@@ -130,33 +134,21 @@ df
 df.to_html()
 
 
-# In[ ]:
-
-
-
-
-
 # # D1: Scrape High-Resolution Mars’ Hemisphere Images and Titles
 
 # ### Hemispheres
 
-# In[22]:
-
-
-# Set the executable path and initialize Splinter
-executable_path = {'executable_path': 'chromedriver.exe'}
-browser = Browser('chrome', **executable_path, headless=False)
-
-
-# In[23]:
+# In[16]:
 
 
 # 1. Use browser to visit the URL 
-url = 'https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars'
+executable_path = {'executable_path': 'chromedriver.exe'}
+browser = Browser('chrome', **executable_path, headless=False)
+url = 'https://marshemispheres.com/'
 browser.visit(url)
 
 
-# In[24]:
+# In[17]:
 
 
 # 2. Create a list to hold the images and titles.
@@ -176,7 +168,7 @@ for i in range(4):
     browser.back()
 
 
-# In[25]:
+# In[18]:
 
 
 # 4. Print the list that holds the dictionary of each image url and title.
@@ -191,6 +183,7 @@ browser.quit()
 
 
 # In[ ]:
+
 
 
 
